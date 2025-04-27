@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="xe_4">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0614732787260263 -0.163285290172582 0.139749667568583" rpy="0 0 0" />
+      <mass value="0.525276609713374" />
+      <inertia ixx="0.00118889424009473" ixy="-4.66163349173542E-07" ixz="-3.87633750168312E-10"
+               iyy="0.000883705188266734" iyz="6.86269880388193E-09" izz="0.00205494454976402" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="front_right_link">
+    <inertial>
+      <origin xyz="1.38777878078145E-17 0.00800000000000001 1.38777878078145E-17" rpy="0 0 0" />
+      <mass value="0.0537442846179065" />
+      <inertia ixx="2.10387038973688E-05" ixy="3.5056171441999E-38" ixz="-1.15379320514335E-37"
+               iyy="3.92583949923622E-05" iyz="3.33529490322889E-21" izz="2.10387038973688E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/front_right_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_right_joint" type="continuous">
+    <origin xyz="0.18174 -0.086658 0.11603" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="front_right_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="back_right_link">
+    <inertial>
+      <origin xyz="0 0.00799999999999998 1.38777878078145E-17" rpy="0 0 0" />
+      <mass value="0.0537442846179064" />
+      <inertia ixx="2.10387038973688E-05" ixy="3.50561714419991E-38" ixz="-1.15379320514336E-37"
+               iyy="3.92583949923622E-05" iyz="2.91266075558846E-21" izz="2.10387038973688E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/back_right_link .STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/back_right_link .STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="back_right_joint" type="continuous">
+    <origin xyz="0.18174 -0.22166 0.11603" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="back_right_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="front_left_link">
+    <inertial>
+      <origin xyz="2.77555756156289E-17 -0.008 0" rpy="0 0 0" />
+      <mass value="0.0537442846179065" />
+      <inertia ixx="2.10387038973688E-05" ixy="3.5056171441999E-38" ixz="-1.15379320514335E-37"
+               iyy="3.92583949923622E-05" iyz="3.05383291346418E-21" izz="2.10387038973688E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/front_left_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="front_left_joint" type="continuous">
+    <origin xyz="-0.058665 -0.086658 0.11603" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="front_left_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="back_left_link">
+    <inertial>
+      <origin xyz="-2.77555756156289E-17 -0.008 2.77555756156289E-17" rpy="0 0 0" />
+      <mass value="0.0537442846179065" />
+      <inertia ixx="2.10387038973689E-05" ixy="-1.55749413174486E-22" ixz="-1.0900813371481E-22"
+               iyy="3.92583949923622E-05" iyz="2.4689561138458E-21" izz="2.10387038973689E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/back_left_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/back_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="back_left_joint" type="continuous">
+    <origin xyz="-0.058665 -0.22166 0.11603" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="back_left_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="link1_link">
+    <inertial>
+      <origin xyz="0.0420436004686703 1.47276565942711E-09 -0.00126903695496102" rpy="0 0 0" />
+      <mass value="0.0367975504819107" />
+      <inertia ixx="3.79192552675337E-06" ixy="1.3618516728618E-12" ixz="3.55472653343413E-07"
+               iyy="3.44370026892355E-05" iyz="2.67902459355996E-13" izz="3.52474565119633E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/link1_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/link1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link1_joint" type="revolute">
+    <origin xyz="0.060035 -0.10416 0.15203" rpy="-1.5708 -1.555 1.5708" />
+    <parent link="base_link" />
+    <child link="link1_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.3" effort="10" velocity="1.0" />
+  </joint>
+
+  <link name="link2_link">
+    <inertial>
+      <origin xyz="3.44931007367766E-09 -1.6680382700085E-09 0.125171170915148" rpy="0 0 0" />
+      <mass value="0.0371241111703062" />
+      <inertia ixx="4.45845445622506E-05" ixy="-1.11743696058705E-11" ixz="-2.88407238070524E-12"
+               iyy="5.03537247762182E-05" iyz="1.76957128561628E-12" izz="6.72867103735116E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/link2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/link2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="link2_joint" type="prismatic">
+    <origin xyz="0.04 0 -0.0015" rpy="1.5708 0 1.5708" />
+    <parent link="link1_link" />
+    <child link="link2_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.06" upper="0" effort="10" velocity="0.1" />
+  </joint>
+
+  <link name="imu_link">
+    <inertial>
+      <origin xyz="0.000525532368486153 -0.00277473645934152 0.00149999999999945" rpy="0 0 0" />
+      <mass value="0.0018" />
+      <inertia ixx="1.3635E-07" ixy="-5.61629582932362E-22" ixz="-2.40171327104817E-22"
+               iyy="6.13500000000001E-08" iyz="-3.4609579333938E-24" izz="1.95E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/imu_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <joint name="imu_joint" type="fixed">
+    <origin xyz="0.061535 -0.15415 0.13703" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="0.00644106594710503 0.000553262223239606 -0.0012676232895959" rpy="0 0 0" />
+      <mass value="0.00569321375067929" />
+      <inertia ixx="3.73318194488939E-07" ixy="-5.53630936551191E-09" ixz="-9.1261226922927E-09"
+               iyy="2.79136234351471E-07" iyz="-9.11163915542091E-09" izz="2.90580696548858E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/camera_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>xe_4/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <joint name="camera_joint" type="prismatic">
+    <origin xyz="0.0587 -0.048158 0.14085" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0" effort="0" velocity="0" />
+  </joint>
+
+  <link name="lidar_Link">
+    <inertial>
+      <origin xyz="0.0133918743875461 -0.000989517063655694 -0.028990920691192" rpy="0 0 0" />
+      <mass value="0.0664008074578348" />
+      <inertia ixx="1.88360700674189E-05" ixy="1.15047696543767E-08" ixz="-4.26462847749789E-07"
+               iyy="2.33873283955793E-05" iyz="1.94167984279753E-08" izz="4.00221561461094E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/lidar_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://xe_4/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="lidar_Link">
+    <sensor type="ray" name="lidar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.1415</min_angle>
+            <max_angle>3.1415</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_Link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <joint name="lidar_joint" type="fixed">
+    <origin xyz="0.062159 -0.22315 0.27253" rpy="0 0 1.5708" />
+    <parent link="base_link" />
+    <child link="lidar_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+
+  <gazebo>
+
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <leftFrontJoint>front_left_joint</leftFrontJoint>
+      <rightFrontJoint>front_right_joint</rightFrontJoint>
+      <leftRearJoint>back_left_joint</leftRearJoint>
+      <rightRearJoint>back_right_joint</rightRearJoint>
+      <wheelSeparation>0.173316</wheelSeparation>
+      <wheelDiameter>0.08</wheelDiameter> 
+      <torque>20</torque> 
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishWheelTF>true</publishWheelTF>
+      <publishWheelJointState>true</publishWheelJointState>
+      <updateRate>100.0</updateRate>
+      <publishOdomTF>true</publishOdomTF>
+
+      <!-- cảnh báo -->
+      <covariance_x>0.00001</covariance_x>
+      <covariance_y>0.00001</covariance_y>
+      <covariance_yaw>0.001</covariance_yaw>
+    </plugin>
+
+   
+    <plugin name="arm_controller" filename="libgazebo_ros_joint_pose_trajectory.so">
+      <robotNamespace>/xe_4</robotNamespace>
+      <updateRate>100.0</updateRate>
+      <topicName>arm_controller/command</topicName>
+      <jointName>link1_joint, link2_joint</jointName>
+    </plugin>
+  </gazebo>
+</robot>

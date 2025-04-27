@@ -1,0 +1,23 @@
+<launch>
+  <!-- Tải mô hình robot xe_4 từ file URDF vào Gazebo -->
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-file $(find xe_4)/urdf/xe_4.urdf -urdf -model xe_4" />
+
+  <!-- Chạy Gazebo server với engine ODE và thế giới rỗng -->
+  <node name="gazebo" pkg="gazebo_ros" type="gzserver" args="-e ode $(find xe_4)/worlds/empty.world" />
+
+  <!-- Khởi động giao diện Gazebo GUI -->
+  <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" />
+
+  <!-- Xuất bản transform tĩnh giữa base_link và base_footprint -->
+  <node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link base_footprint 40" />
+
+  <!-- Tải cấu hình bộ điều khiển từ file YAML -->
+  <rosparam file="$(find xe_4)/config/controller.yaml" command="load" />
+
+  <!-- Khởi động bộ điều khiển dẫn động vi sai và trạng thái khớp -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" args="diff_drive_controller joint_state_controller" />
+
+
+  
+</launch>
+

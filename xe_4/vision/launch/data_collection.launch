@@ -1,0 +1,10 @@
+<launch>
+  <!-- Gọi mô phỏng Gazebo của bạn -->
+  <include file="$(find xe_4)/launch/gazebo.launch" />
+
+  <!-- Node lưu ảnh từ camera -->
+  <node name="image_saver" pkg="xe_4" type="capture_images.py" output="screen"
+        cwd="node" launch-prefix="python3">
+    <param name="save_path" value="$(find xe_4)/vision_yolov8/yolov8_dataset/images" />
+  </node>
+</launch>
